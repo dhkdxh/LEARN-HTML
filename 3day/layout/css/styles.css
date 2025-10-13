@@ -1,0 +1,25 @@
+html,
+body {
+  /* display: flex;
+  /* justify-content: space-between; 
+  align-items: center; */
+
+  height: 100%;
+}
+
+body {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+
+#second {
+  background-color: seagreen;
+}
