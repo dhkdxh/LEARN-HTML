@@ -1,0 +1,47 @@
+@import './global.css';
+
+/* .find-search-bar-form div {
+  display: flex;
+  background-color: var(--darkpurple);
+  margin: 2rem;
+  justify-content: space-between;
+  padding: 0.4rem;
+  border-radius: 1rem;
+}
+
+.find-search-bar-form div span {
+  margin-right: 1rem;
+}
+
+.find-search_bar {
+  background-color: var(--darkpurple);
+} */
+
+.find-search-bar-form {
+  padding: 0 25px;
+}
+
+.find-search-bar-form div {
+  width: 100%;
+}
+
+.find-search_bar {
+  margin-top: 50px;
+  background-color: var(--darkpurple);
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.find-search_bar:focus {
+  background-color: rgb(103, 74, 152);
+}
+
+.find-search-bar-form span {
+  position: absolute;
+  font: 1rem;
+  bottom: 0.4rem;
+  right: 20px;
+}

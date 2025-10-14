@@ -1,0 +1,61 @@
+@import './global.css';
+
+html,
+body {
+  overflow: hidden;
+  /* html과 css를 요소 영역에 맞추는 속성 방법 */
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.login-title__maintext {
+  color: var(--purple);
+  font-size: 3rem;
+}
+
+.login-title__subtext {
+  font-size: 1rem;
+  font-weight: 150;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.login-form input {
+  padding: 15px 0;
+  margin: 0 10px;
+  background-color: var(--background-purple);
+  font-size: 1.5rem;
+}
+
+.login-form input[type='submit'] {
+  color: white;
+  background-color: var(--darkpurple);
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+.login-form input[type='submit']:active {
+  background-color: var(--purple);
+}
+/* 클릭 같은 action이 들어가면 색상이 변함 hover랑은 차이 */
+
+.login-form input:not([type='submit']) {
+  color: white;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.login-form input:focus {
+  border-color: white;
+}
