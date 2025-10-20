@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // GET 요청을 위한 비동기 함수
+      // 요청 결과에 따라 수행할 성공,실패 콜백 함수 전달
+      const get = (successCallback, failureCallback) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
+        xhr.send();
+
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            successCallback(JSON.parse(xhr.response));
+          } else {
+            failureCallback(xhr.status);
+          }
+        };
+      };
+
+      get(console.log, console.error);
+      // {
+      //   userId: 1,
+      //   id: 1,
+      //   title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
+      //   body: 'quia et suscipit\nsuscipit recusandae consequuntur …strum rerum est autem sunt rem eveniet architecto'
+      // };
+    </script>
+  </body>
+</html>

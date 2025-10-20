@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+        setTimeout(() => {
+          throw new Error('Error!');
+        }, 1000);
+      } catch (error) {
+        // 이벤트 큐에서 콜 스택으로 setTimeout 의 콜백 함수로 이동되어 실행되는 시점에서 setTimout 함수는 이미, 콜 스택에서 pop된 상태이고 주체가 아니다.
+        // 콜백 함수의 호출자(caller)가 setTimeout 인데, 에러 발생 시점에 존재하지 않기 때문에 Error 를 캐치할 수 없다.
+        console.error('캐치 에러 :', error);
+      }
+    </script>
+  </body>
+</html>
