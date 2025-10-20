@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: 'Yewon',
+        age: 22,
+        alive: true,
+        hobby: ['programming', 'music'],
+      };
+
+      const json = JSON.stringify(obj);
+      //obj를 json 형태로 바꿔줌
+      console.log(json);
+
+      //복구
+      const parsed1 = JSON.parse(json);
+      console.log(typeof parsed1, parsed1);
+
+      const prettyJSON = JSON.stringify(obj, null, 2);
+      //들여쓰기 가능
+      console.log(prettyJSON);
+
+      function filter(key, value) {
+        // undefined 는 반환 X
+        return typeof value === 'number' ? undefined : value;
+      }
+
+      const strFilteredJSON = JSON.stringify(obj, filter, 2);
+      console.log(typeof strFilteredJSON, strFilteredJSON);
+
+      //배열 처리 방법
+      const todos = [
+        { id: 1, content: 'html', complete: false },
+        { id: 2, content: 'java', complete: true },
+        { id: 3, content: 'python', complete: false },
+      ];
+
+      const json1 = JSON.stringify(todos, null, 2);
+      console.log(typeof json1, json1);
+    </script>
+  </body>
+</html>
