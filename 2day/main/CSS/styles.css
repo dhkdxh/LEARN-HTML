@@ -1,0 +1,32 @@
+header {
+  width: 310px;
+  height: 50px;
+  background-color: azure;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+main nav {
+  width: 100px;
+  height: 200px;
+  background-color: bisque;
+  border-radius: 5px;
+}
+
+article {
+  width: 200px;
+  height: 200px;
+  background-color: bisque;
+  border-radius: 5px;
+}
+
+footer {
+  width: 310px;
+  height: 50px;
+  background-color: azure;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+}
